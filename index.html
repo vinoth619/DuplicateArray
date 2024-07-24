@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>duplicate Array</title>
+</head>
+<body>
+    <h1>finding duplicate</h1>
+    <input type="text" id="in1">
+    <button onclick="push()">Push To Array</button>
+    <button onclick="Result()">Result</button>
+    <h1 id="show"></h1>
+    <h1 id="result"></h1>
+
+
+
+    <script>
+        var Ar=[]
+        var in1=document.getElementById("in1")
+        function push(){
+            Ar.push(in1.value)
+            console.log(Ar)
+            in1.value=""}
+           
+            function Result(){
+                if(Ar.length==0){
+                    alert("plese enter the array value")
+                }
+                else if(Ar.length==1){
+                    alert("enter one more value")
+                }
+                else {
+                    var c='';
+                    var count=0;
+                    var re=false;
+                    for(let i=0;i<Ar.length;i++){
+                    for(let j=i+1;j<Ar.length;j++){
+                        if(Ar[i]==Ar[j]){
+                            re=true;
+                            break;
+                        }
+                          
+
+                    }
+                    
+                        }
+                        if(re==true){
+                            document.getElementById("show").innerHTML=re
+                        }
+                        else{
+                            document.getElementById("show").innerHTML=re
+
+
+                        }
+                        document.getElementById("result").innerHTML=Ar.toString()
+                    
+                    }
+                    
+
+                }
+
+
+           
+        
+
+
+    </script>
+    
+</body>
+</html>
